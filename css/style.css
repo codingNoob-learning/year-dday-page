@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --font-color: #000;
+    --bg-color: #fff;
+
+    --impending-color: red;
+
+    --dark-font-color: #ededed;
+    --dark-bg-color: #1a1a1a;
+}
+
+body.dark {
+    background-color: var(--dark-bg-color);
+}
+
+.container {
+    display: flex;
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container.dark {
+    background-color: var(--dark-bg-color);
+}
+
+.container header {
+    font-size: 60px;
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.container header.dark {
+    color: var(--dark-font-color);
+}
+
+.container .time-content {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.container .time-content .time {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .time-content .time .number,
+.container .time-content .time .text {
+    font-weight: 500;
+    color: var(--font-color);
+}
+
+.container .time-content .time .number.dark,
+.container .time-content .time .text.dark{
+    color: var(--dark-font-color);
+}
+
+.container .time-content .time .number {
+    font-size: 40px;
+}
+
+.container .time-content .time .number.impending {
+    color: var(--impending-color);
+}
+
+.container .time-content .time .text {
+    text-transform: capitalize;
+    font-size: 14px;
+}
